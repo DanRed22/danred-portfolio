@@ -17,7 +17,7 @@ const MySkills = () => {
         <div className="w-full flex flex-col gap-8">
           <div className="w-full flex justify-center items-center">
             <Image
-              src="https://skillicons.dev/icons?i=androidstudio,angular,atom,aws,azure,bash,blender,bootstrap,c,cs,cpp,cloudflare,codepen,css,dart,django,docker,dotnet,eclipse,express,figma,firebase,flask,flutter,gcp,git,github,githubactions,gitlab,go,gradle,gulp,heroku,html,idea,java,js,jquery,kotlin,linkedin,linux,md,mongodb,mysql,netlify,nextjs,nginx,nodejs,ps,php,rust,svelte,tauri,electron,postgres,powershell,py,pytorch,qt,react,redux,regex,sass,sqlite,stackoverflow,svg,tailwind,tensorflow,twitter,ts,unity,unreal,vercel,visualstudio,vite,vscode,vue,webflow,webpack,wordpress&perline=15"
+              src="https://skillicons.dev/icons?i=androidstudio,angular,apple,atom,aws,azure,bash,bootstrap,c,cs,cpp,cloudflare,codepen,css,devto,docker,eclipse,express,figma,firebase,flutter,gcp,git,github,githubactions,gitlab,godot,gradle,html,java,js,jquery,laravel,linkedin,linux,mongodb,mysql,nestjs,netlify,nextjs,nginx,nodejs,ps,php,electron,postgres,postman,powershell,py,react,redux,regex,sass,sequelize,sqlite,stackoverflow,svg,tailwind,tensorflow,twitter,ts,vercel,visualstudio,vite,vscode,vue,webflow,webpack,windows,wordpress,xd&perline=8"
               alt="My Skills"
               className="relative w-full h-full max-w-3xl"
               width={500}

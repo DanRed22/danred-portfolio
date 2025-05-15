@@ -18,33 +18,45 @@ const AboutMe = () => {
         <strong className="text-foreground dark:text-white">
           {siteConfig.author}
         </strong>
-        , and I've been passionate about coding since I was a child. I fell in
-        love with programming at a young age, spending countless hours learning,
-        experimenting, and creating small projects. Over the years, this passion
-        has grown into a career as a Full Stack developer, where I continue to
-        build innovative solutions that solve real-world problems.
+        , and I am a passionate software engineer. I have always been fascinated
+        by technology and its ability to solve complex problems and make life
+        easier. I am currently in my 4th year of studying Bachelor of Science in
+        Information Technology at the University of San Carlos. I am a quick
+        learner and I am always looking for new challenges that help me expand
+        my skills.
       </p>
 
       <p className="text-sm sm:text-base md:text-lg text-foreground dark:text-white mt-4">
-        As I’ve evolved in my career, I’ve expanded my expertise into new areas
-        like Machine Learning (ML) and Artificial Intelligence (AI), diving deep
-        into neural networks and other cutting-edge technologies. But no matter
-        how much I learn, I always keep that same excitement and curiosity I had
-        as a child, exploring new fields and technologies that push the
-        boundaries of what’s possible.
+        As I’ve evolved in my career, I’ve also never stopped my passion for
+        learning new technologies and tools. Apart from the tech buzz I'm
+        currently into, I'm also interested in other fields such as Music and
+        the Arts. On my free time I do songwriting, music production, and
+        playing instruments. Which proves my time-management skills and
+        flexibility in learning something new. (Feel free to check out some of
+        my songs out on Spotify, Apple Music, and YouTube.)
       </p>
 
       <p className="text-sm sm:text-base md:text-lg text-foreground dark:text-white mt-4">
         Today, I’m not just focused on building apps and websites; I’m also
-        exploring DevOps tools like Docker, Kubernetes, and AWS to optimize and
-        scale my projects. I believe in continuous learning and growth, and I’m
-        always looking for new challenges that help me expand my skills.
+        exploring tools and technologies like Docker, Aiven Cloud, Google Cloud
+        Platform (GCP), VPS, Linux Server Deployments, and Amazon Web Services
+        (AWS) to optimize and scale my projects. I believe in continuous
+        learning and growth, and I’m always looking for new opportunities to
+        improve my skills and knowledge.
       </p>
 
       <p className="text-sm sm:text-base md:text-lg text-foreground dark:text-white mt-4">
-        If you’re interested in collaborating on something exciting or need help
-        with a project, feel free to reach out. Let’s create something amazing
-        together!
+        I have also undergone a journey of leadership such as becoming a leader
+        of teams and a councilor for the highest student governing body of my
+        current university. This has helped me develop my leadership skills and
+        my ability to work in a team. And can assure you that I can be a
+        valuable asset to your team and is morally and ethically sound.
+      </p>
+
+      <p className="text-sm sm:text-base md:text-lg text-foreground dark:text-white mt-4">
+        If you're interested in collaborating on something exciting or need help
+        with a project, feel free to reach out. Let's solve problems together
+        with technology!
       </p>
     </AnimationContainer>
   );

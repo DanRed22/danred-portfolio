@@ -9,9 +9,13 @@ const ContactMe = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
   const [isWaiting, setIsWaiting] = useState(false);
-  const [waitTime, setWaitTime] = useState(0); // In seconds
+  const [waitTime, setWaitTime] = useState(0);
   const [userInfo, setUserInfo] = useState<any>({});
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     if (siteConfig.contact.debug) {
@@ -45,43 +49,72 @@ const ContactMe = () => {
     }
   }, []);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setError('');
 
-    // Check if user is trying to send an email before the ratelimit window is up
+    // Check rate limiting
     const lastSubmittedTime = sessionStorage.getItem('lastSubmittedTime');
     const lastEmail = sessionStorage.getItem('lastEmail');
     const currentTime = Date.now();
     const rateLimit = siteConfig.contact.rateLimit;
-    const FIVE_MINUTES = rateLimit * 60 * 1000; // default 10 minutes in milliseconds
+    const FIVE_MINUTES = rateLimit * 60 * 1000;
 
     if (
       lastSubmittedTime &&
       currentTime - parseInt(lastSubmittedTime) < FIVE_MINUTES
     ) {
-      // If less than 10 minutes have passed since last submission
       setIsWaiting(true);
       setWaitTime(
         Math.ceil(
           (FIVE_MINUTES - (currentTime - parseInt(lastSubmittedTime))) / 1000
         )
-      ); // Show wait time in seconds
+      );
       return;
     }
 
     if (lastEmail && lastEmail !== email) {
-      // If email is different and already used
       setIsWaiting(true);
-      setWaitTime(Math.ceil(FIVE_MINUTES / 1000)); // Show 5 minutes wait time
+      setWaitTime(Math.ceil(FIVE_MINUTES / 1000));
       return;
     }
 
-    // Simulate form submission and success
-    setTimeout(() => {
+    try {
+      setIsLoading(true);
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          message,
+          userInfo: siteConfig.contact.debug ? userInfo : undefined
+        })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
       setIsSubmitted(true);
       sessionStorage.setItem('lastSubmittedTime', currentTime.toString());
       sessionStorage.setItem('lastEmail', email);
-    }, 500);
+
+      // Reset form
+      setName('');
+      setEmail('');
+      setPhone('');
+      setMessage('');
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to send message');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -105,6 +138,12 @@ const ContactMe = () => {
         </div>
 
         <div className="w-full flex justify-center items-center flex-col">
+          {error && (
+            <div className="mb-4 p-4 bg-red-100 text-red-700 rounded-xl">
+              {error}
+            </div>
+          )}
+
           <form
             onSubmit={handleSubmit}
             className="w-full space-y-4"
@@ -141,6 +180,8 @@ const ContactMe = () => {
                   label="Phone"
                   placeholder="Enter your phone number"
                   type="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   required
                 />
               </div>
@@ -151,6 +192,8 @@ const ContactMe = () => {
                 isClearable={true}
                 label="Message"
                 placeholder="Enter your message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 rows={4}
                 required
               />
@@ -170,12 +213,15 @@ const ContactMe = () => {
             <Button
               type="submit"
               className="flex items-center justify-center rounded-xl px-5 py-3 text-white dark:text-black bg-black dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-200 shadow-sm transition ease mx-auto"
+              disabled={isLoading}
             >
-              <span className="font-medium text-base">Send</span>
+              <span className="font-medium text-base">
+                {isLoading ? 'Sending...' : 'Send'}
+              </span>
 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="ml-3 h-5 w-5"
+                className={`ml-3 h-5 w-5 ${isLoading ? 'animate-spin' : ''}`}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -190,7 +236,6 @@ const ContactMe = () => {
             </Button>
           </form>
 
-          {/* Show warning message if the user tries to submit before waiting */}
           {isWaiting && (
             <div className="mt-4 text-red-500">
               <p>
@@ -202,7 +247,6 @@ const ContactMe = () => {
         </div>
       </div>
 
-      {/* Success Popup */}
       {isSubmitted && (
         <div className="fixed top-0 left-0 w-full h-full bg-black/60 flex items-center justify-center z-50">
           <div className="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-lg text-center">
@@ -211,8 +255,7 @@ const ContactMe = () => {
               <span className="text-black dark:text-white">🎉</span>
             </h3>
             <p className="text-base text-foreground dark:text-gray-400">
-              Your message has been sent to {siteConfig.social.email}{' '}
-              successfully.
+              Your message has been sent successfully.
             </p>
             <Button
               onPress={() => setIsSubmitted(false)}

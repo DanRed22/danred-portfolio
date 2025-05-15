@@ -17,12 +17,12 @@ const LinksMenu = [
     name: 'Projects',
     path: '/projects',
     delay: '200ms'
-  },
-  {
-    name: 'Blog',
-    path: '/blog',
-    delay: '225ms'
   }
+  // {
+  //   name: 'Blog',
+  //   path: '/blog',
+  //   delay: '225ms'
+  // }
 ];
 
 const LinksMenuNav = () => {
