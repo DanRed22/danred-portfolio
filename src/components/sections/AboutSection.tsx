@@ -40,8 +40,8 @@ const AboutSection = () => {
             </li>
             <li>
               📚 I'm currently focused on learning and exploring the exciting
-              fields of Machine Learning (ML) and Artificial Intelligence (AI),
-              including neural networks and other related topics.
+              fields of Artificial Intelligence (AI), Cloud Platforms, and
+              DevOps.
             </li>
             <li>
               🤝 I'm always excited to collaborate with others and contribute to
@@ -54,9 +54,12 @@ const AboutSection = () => {
               effectively to your project's tech stack.
             </li>
             <li>
-              📬 If you come across anything interesting in my projects or have
-              a project you'd like me to collaborate on, please don't hesitate
-              to get in touch. Let's create something awesome together!
+              📬 [MUSIC] If you come across anything interesting in my projects
+              or have a project you'd like me to collaborate around music,
+              please don't hesitate to get in touch. Let's create something
+              awesome together! I have used: FL Studio 20, Logic Pro X, VSTs and
+              Plugins. I also taught myself to play the piano, guitar, and
+              ukulele.
             </li>
           </ul>
 

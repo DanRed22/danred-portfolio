@@ -15,11 +15,12 @@ export const faqData: FAQItem[] = [
     title: 'Who are you?',
     content: (
       <>
-        Hey there! 👋 I'm Muhammad Fiaz, a Full Stack developer passionate about
-        coding since childhood. I build innovative solutions using a variety of
-        technologies like Next.js, Node.js, Python, TypeScript, Go, Rust,
-        Flutter, and GenAI. I'm also diving into MLOps and always eager to learn
-        new tools and techniques.
+        Hey there! 👋 I'm Angelou Sereño, a Full Stack developer passionate
+        making solutions from technology for the ease of people. I build
+        innovative solutions using a variety of technologies like NextJS/TS,
+        ReactTS/JS, ExpressJS/TS, TailwindCSS, Node.js, Python, TypeScript,
+        C/C++, C#, ReactNative, and Java. I'm always eager to learn new tools
+        and techniques.
         <br className="mb-2" />
         For more about me, check out my{' '}
         <Link
@@ -39,10 +40,11 @@ export const faqData: FAQItem[] = [
     content: (
       <>
         I am a full-stack developer with a focus on both frontend and backend
-        technologies. I mostly use tools like Next.js, TypeScript, Node.js,
-        Python (Django, Flask, FastAPI), MongoDB, and SQL for my regular basis
-        projects. I am also diving into Generative AI, Machine Learning, and
-        Data Science to build smarter, data-driven full-stack applications.
+        technologies. I mostly use tools like NextJS/TS, ReactTS/JS,
+        ExpressJS/TS, TailwindCSS, Node.js, Python, TypeScript, C/C++, C#,
+        ReactNative, and Java. I am also diving into AI Technologies, Cloud
+        Platforms, and DevOps to build smarter, data-driven full-stack
+        applications.
         <br className="mb-2" />
         For more details on my tech stack and projects, please check out my{' '}
         <Link
@@ -61,9 +63,9 @@ export const faqData: FAQItem[] = [
     title: 'Can we hire you?',
     content: (
       <>
-        Yes, I am currently looking for job opportunities! Feel free to reach
-        out to me via email or Linkedin if you're interested in hiring me or
-        collaborating on exciting projects.
+        Yes, although I'm employed as a Software Engineer, I'm always open to
+        freelance work or collaborating on exciting projects. Rest assured that
+        I'll always give my best effort to your project and in a timely manner.
         <br className="mb-2" />
         You can contact me through:
         <ul className="list-disc pl-6 text-black dark:text-white text-sm">
@@ -114,7 +116,7 @@ export const faqData: FAQItem[] = [
               target="_blank"
               rel="noopener noreferrer"
             >
-              Fiaz's Server
+              Discord Profile
             </Link>
           </li>
         </ul>
@@ -129,27 +131,6 @@ export const faqData: FAQItem[] = [
           GitHub page
         </Link>
         .
-      </>
-    )
-  },
-  {
-    title: 'Do you work on open-source projects?',
-    content: (
-      <>
-        Yes, I contribute to open-source projects! You can explore my
-        repositories and ongoing contributions on my GitHub. Feel free to
-        contribute or check out my work!
-        <br className="mb-2" />
-        Visit my{' '}
-        <Link
-          href={`https://github.com/${siteConfig.social.github}`}
-          className="text-blue-500 hover:underline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub page
-        </Link>{' '}
-        for more.
       </>
     )
   },
@@ -182,32 +163,6 @@ export const faqData: FAQItem[] = [
         You can support me by starring my repositories, contributing to
         open-source projects, or simply following my work on GitHub. Sharing
         your feedback or spreading the word also helps!
-        <br className="mb-2" />
-        Additionally, you can support me directly through:
-        <ul className="list-disc pl-6 text-black dark:text-white text-sm">
-          <li>
-            <Link
-              href={siteConfig.social.kofi}
-              className="text-blue-500 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ko-fi
-            </Link>{' '}
-            – Buy me a coffee and support my work!
-          </li>
-          <li>
-            <Link
-              href={siteConfig.social.sponsor}
-              className="text-blue-500 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub Sponsors
-            </Link>{' '}
-            – Sponsor me on GitHub to show your support!
-          </li>
-        </ul>
         <br className="mb-2" />
         Visit my{' '}
         <Link
@@ -245,16 +200,6 @@ export const faqData: FAQItem[] = [
         to discuss your project details. I would be happy to explore how we can
         collaborate!
         <br className="mb-2" />
-        You can reach me through the contact information provided on my{' '}
-        <Link
-          href={`https://github.com/${siteConfig.social.github}`}
-          className="text-blue-500 hover:underline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub page
-        </Link>
-        .
       </>
     )
   },
@@ -268,25 +213,54 @@ export const faqData: FAQItem[] = [
         tasks. If I missed your message by mistake, please feel free to reach
         out again.
         <br className="mb-2" />
-        To get a faster response, you can also create a notice through a{' '}
+        To get a faster response, you can also create a notice through my{' '}
         <Link
-          href={`https://github.com/${siteConfig.social.github}/${siteConfig.social.github}/discussions`}
+          href={`https://github.com/${siteConfig.social.github}`}
           className="text-blue-500 hover:underline"
           target="_blank"
           rel="noopener noreferrer"
         >
-          GitHub Discussion
-        </Link>{' '}
-        or open an issue on my{' '}
-        <Link
-          href={`https://github.com/${siteConfig.social.github}/${siteConfig.social.github}/issues`}
-          className="text-blue-500 hover:underline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub repository
+          GitHub page{' '}
         </Link>
-        . I try to keep track of discussions and issues more actively.
+        or{' '}
+        <Link
+          href={`mailto:${siteConfig.social.email}`}
+          className="text-blue-500 hover:underline"
+        >
+          email
+        </Link>
+        .
+      </>
+    )
+  },
+  {
+    title: `I'm also interested on your music, where can I check your art?`,
+    content: (
+      <>
+        I'm also interested on your music, where can I check your art?
+        <br className="mb-2" />
+        You can check my music on my{' '}
+        <Link
+          href={`https://open.spotify.com/artist/4mNUjSfhyYwqkvcOMO5EHd`}
+          className="text-blue-500 hover:underline"
+        >
+          Spotify
+        </Link>
+        ,{' '}
+        <Link
+          href={`https://music.apple.com/ph/artist/angelou-sere%C3%B1o/1737192616`}
+          className="text-blue-500 hover:underline"
+        >
+          Apple Music
+        </Link>
+        , and
+        <Link
+          href={`https://www.youtube.com/@angelousereno/videos`}
+          className="text-blue-500 hover:underline"
+        >
+          YouTube
+        </Link>
+        .
       </>
     )
   }
