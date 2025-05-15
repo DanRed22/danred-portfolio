@@ -17,6 +17,34 @@ const Chatbot = () => {
   const rateLimit = siteConfig.chatbot.rateLimit;
   const currentTime = Date.now();
 
+  // Site content context
+  const siteContext = {
+    author: siteConfig.author,
+    description: siteConfig.metadata.description,
+    technologies: [
+      'NextJS/TS',
+      'ReactTS/JS',
+      'ExpressJS/TS',
+      'TailwindCSS',
+      'Node.js',
+      'Python',
+      'TypeScript',
+      'C/C++',
+      'C#',
+      'ReactNative',
+      'Java'
+    ],
+    currentRole: 'Software Engineer at Hatchit Solutions',
+    education:
+      'Bachelor of Science in Information Technology at University of San Carlos',
+    contact: {
+      email: siteConfig.social.email,
+      github: siteConfig.social.github,
+      linkedin: siteConfig.social.linkedin,
+      discord: siteConfig.social.discord
+    }
+  };
+
   const toggleChat = () => {
     setIsOpen(!isOpen);
   };
@@ -57,12 +85,15 @@ const Chatbot = () => {
     });
 
     try {
-      const res = await fetch('/api/fetch-chat', {
+      const res = await fetch('/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ message: message.trim() })
+        body: JSON.stringify({
+          message: message.trim(),
+          context: siteContext // Include site context in the API call
+        })
       });
 
       if (!res.ok) {
@@ -104,12 +135,19 @@ const Chatbot = () => {
 
     if (messages.length === 0) {
       const initialMessage = {
-        text: 'Hello, how can I assist you today?',
+        text: `Hello! I'm ${siteConfig.author}'s AI assistant. I can help you learn more about:
+- My background and experience
+- Technical skills and projects
+- Contact information
+- Current work and education
+- Music and artistic endeavors
+
+How can I assist you today?`,
         sender: 'bot'
       };
       setMessages([initialMessage]);
     }
-  }, [isOpen, messages.length, rateLimit]); // Add messages.length and rateLimit as dependencies
+  }, [isOpen, messages.length, rateLimit]);
 
   return (
     <>

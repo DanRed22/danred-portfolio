@@ -72,15 +72,15 @@ export const siteConfig: {
     discord: 'https://discordapp.com/users/755454409978150982',
     github_organisation: '#',
     daily_dev: {
-      username: 'muhammadfiaz',
+      username: 'angelousereno',
       card: 'https://api.daily.dev/devcards/v2/OPJJpnN1VBgNZZsZLW2Nl.png?r=ttd&type=wide'
     },
-    holopin: 'muhammadfiaz'
+    holopin: 'angelousereno'
   },
   metadata: {
-    description: `Hi! I'm Muhammad Fiaz, a Full Stack developer passionate about building apps, exploring AI and ML, and collaborating on exciting projects. Let's connect!`,
+    description: `Hi! I'm Angelou Sereño, a Full Stack developer passionate about building apps, exploring new technologies, and collaborating on exciting projects. Let's connect!`,
     keywords:
-      'Muhammad Fiaz, Full Stack Developer, Muhammad Fiaz portfolio, Muhammad Fiaz GitHub, Web Development, Mobile Applications, Machine Learning, Artificial Intelligence, Programming Languages, Open Source Developer, App Development',
+      'Angelou Sereño, Full Stack Developer, Angelou Sereño portfolio, Angelou Sereño GitHub, Web Development, Mobile Applications, Machine Learning, Artificial Intelligence, Programming Languages, Open Source Developer, App Development',
     type: 'website'
   },
   chatbot: {
