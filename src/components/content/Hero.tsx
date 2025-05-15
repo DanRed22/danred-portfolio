@@ -36,12 +36,6 @@ const Hero = () => {
           >
             Hire Me
           </Link>
-          <Link
-            href={siteConfig.social.kofi}
-            className="px-4 py-2 sm:px-6 sm:py-3 text-pink-500 font-bold rounded-lg border border-pink-500 hover:bg-pink-500 hover:text-white transition duration-300 backdrop-blur-sm bg-white/20 dark:bg-gray-800/30 dark:border-pink-300 dark:text-pink-300 dark:hover:bg-pink-600 dark:hover:text-white"
-          >
-            Buy Me a Coffee
-          </Link>
         </div>
       </AnimationContainer>
 
@@ -53,7 +47,7 @@ const Hero = () => {
           width={250}
           height={250}
           priority
-          className="rounded-[12px] filter grayscale hover:grayscale-0 transition ease bg-background/30 dark:bg-background/30"
+          className="rounded-[12px] filter grayscale-[50%] hover:grayscale-0 transition ease bg-background/30 dark:bg-background/30"
         />
       </AnimationContainer>
     </div>

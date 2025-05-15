@@ -14,10 +14,10 @@ export const navItemsSelected: { [key: string]: NavItemHeaderAnimation } = {
   },
   '/projects': {
     name: 'projects'
-  },
-  '/blog': {
-    name: 'blog'
   }
+  // '/blog': {
+  //   name: 'blog'
+  // }
 };
 
 const LinksNav = () => {

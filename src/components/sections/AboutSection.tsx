@@ -77,9 +77,6 @@ const AboutSection = () => {
           <ContactMe />
         </AnimationContainer>
         {/* Support Me Section */}
-        <AnimationContainer customClassName="w-full mt-16">
-          <SupportMe />
-        </AnimationContainer>
 
         {/* FAQ Section */}
         <AnimationContainer customClassName="w-full mt-16">

@@ -50,9 +50,9 @@ const HomeSection = () => {
       </AnimationContainer>
 
       {/* Skills Section */}
-      <AnimationContainer customClassName="w-full mt-16">
+      {/* <AnimationContainer customClassName="w-full mt-16">
         <HolopinBadges />
-      </AnimationContainer>
+      </AnimationContainer> */}
 
       {/* Stats Section */}
       <AnimationContainer customClassName="w-full mt-16">
@@ -62,10 +62,6 @@ const HomeSection = () => {
       {/* Contact Section */}
       <AnimationContainer customClassName="w-full mt-16">
         <ContactMe />
-      </AnimationContainer>
-      {/* Support Me Section */}
-      <AnimationContainer customClassName="w-full mt-16">
-        <SupportMe />
       </AnimationContainer>
 
       {/* FAQ Section */}

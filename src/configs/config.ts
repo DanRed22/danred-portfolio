@@ -28,9 +28,13 @@ export const siteConfig: {
     holopin: string;
   };
   other: {
-    hacktoberfest: string;
-    codsoft: string;
-    github_snake: string;
+    hacktoberfest?: string;
+    codsoft?: string;
+    github_snake?: string;
+    uscssc?: string;
+    usccisco?: string;
+    uscgdgoc?: string;
+    hatchit?: string;
   };
   chatbot: {
     rateLimit: number;
@@ -45,32 +49,31 @@ export const siteConfig: {
     type: string;
   };
 } = {
-  baseUrl: 'https://muhammadfiaz.com',
-  domain: 'muhammadfiaz.com',
-  author: 'Muhammad Fiaz',
-  author_surname: 'Fiaz',
-  titlePrefix: 'Muhammad Fiaz',
-  github_org_name: 'Fiaz Technologies',
-  country: 'India',
-  profile_image:
-    'https://avatars.githubusercontent.com/u/75434191?s=400&u=0aa88e4ae941c44425b2be4595cf92b68f578f8a&v=4',
+  baseUrl: 'https://dev-angelou-sereno.vercel.app',
+  domain: 'dev-angelou-sereno.vercel.app',
+  author: 'Angelou Sereño',
+  author_surname: 'Sereño',
+  titlePrefix: 'Angelou Sereño',
+  github_org_name: 'Personal',
+  country: 'Philippines',
+  profile_image: 'https://i.ibb.co/VWrzLmqj/IMG-0877.jpg',
   form_id: 'https://formspree.io/f/myzynpbr',
   social: {
-    kofi: 'https://ko-fi.com/muhammadfiaz',
-    sponsor: 'https://github.com/sponsors/muhammad-fiaz',
-    email: 'contact@muhammadfiaz.com',
-    twitter: '@muhammadfiaz_',
-    github: 'muhammad-fiaz',
-    linkedin: 'https://www.linkedin.com/in/muhammad-fiaz-/',
-    blog: 'https://articles.muhammadfiaz.com',
-    medium: 'https://muhammad-fiaz.medium.com',
-    dev: 'https://dev.to/muhammadfiaz',
-    hashnode: 'https://muhammadfiaz.hashnode.dev',
-    discord: 'https://discord.gg/mXMhy2EX',
-    github_organisation: 'https://github.com/FiazTechnologies',
+    kofi: '#',
+    sponsor: '#',
+    email: 'angeloubendebelsereno@gmail.com',
+    twitter: '#',
+    github: 'DanRed22',
+    linkedin: 'https://ph.linkedin.com/in/angelou-sere%C3%B1o-6a16b9254',
+    blog: '#',
+    medium: '#',
+    dev: '#',
+    hashnode: '#',
+    discord: 'https://discordapp.com/users/755454409978150982',
+    github_organisation: '#',
     daily_dev: {
       username: 'muhammadfiaz',
-      card: 'https://api.daily.dev/devcards/v2/JVyK3ICBzKPdM0rcDj1o4.png?type=wide&r=vde'
+      card: 'https://api.daily.dev/devcards/v2/OPJJpnN1VBgNZZsZLW2Nl.png?r=ttd&type=wide'
     },
     holopin: 'muhammadfiaz'
   },
@@ -88,8 +91,12 @@ export const siteConfig: {
     rateLimit: 10
   },
   other: {
+    uscssc: 'https://www.facebook.com/USCSupremeStudentCouncil',
     hacktoberfest: 'https://hacktoberfest.com/',
     codsoft: 'https://www.codsoft.in/',
+    usccisco: 'https://www.facebook.com/cisco.usc',
+    uscgdgoc: 'https://www.facebook.com/gdgoc.sancarlos',
+    hatchit: 'http://hatchitsolutions.com/',
     github_snake:
       'https://raw.githubusercontent.com/muhammad-fiaz/muhammad-fiaz/output/github-contribution-grid-snake.svg'
   }
