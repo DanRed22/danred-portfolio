@@ -11,6 +11,8 @@ import { Skeleton } from '../ui/skeleton';
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';
 import SearchInput from '@/src/components/ui/SearchInput';
+import FeaturedCardProject from '../content/FeaturedCardProject';
+import { featuredProjects } from '@/src/configs/featuredProjects';
 
 const ProjectsSection = () => {
   const [projectSearch, setProjectSearch] = useState<string>('');
@@ -99,6 +101,21 @@ const ProjectsSection = () => {
             placeholder="Search projects (Languages, frameworks, libraries, etc...)"
             ariaLabel="Search projects"
           />
+
+          <article className="w-full flex justify-center items-center content-center flex-wrap gap-6 mx-auto">
+            {featuredProjects.map((project) => (
+              <FeaturedCardProject
+                key={project.id}
+                title={project.title}
+                des={project.des}
+                category={project.category}
+                repo={project.repo}
+                link={project.link}
+                topics={project.topics}
+                images={project.images}
+              />
+            ))}
+          </article>
 
           {/* Display Projects or error message */}
           <article className="w-full flex justify-center items-center content-center flex-wrap gap-6 mx-auto">

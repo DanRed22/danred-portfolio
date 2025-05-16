@@ -13,6 +13,7 @@ const GitHubTrophies: React.FC = () => (
         className="mx-auto w-full max-w-xl"
         width={500}
         height={400}
+        unoptimized
       />
     </div>
   </AnimationContainer>

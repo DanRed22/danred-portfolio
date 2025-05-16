@@ -40,4 +40,5 @@ export interface CardProjectProps {
   link: string;
   topics: string[];
   date?: string;
+  images?: string[];
 }

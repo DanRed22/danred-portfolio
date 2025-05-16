@@ -21,6 +21,7 @@ const DevCard: React.FC = () => (
           className="mx-auto mt-8"
           width={652}
           height={300}
+          unoptimized
         />
       </Link>
     </div>

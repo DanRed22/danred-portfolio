@@ -22,6 +22,7 @@ const HolopinBadges: React.FC = () => (
           className="mx-auto mb-12"
           width={800}
           height={400}
+          unoptimized
         />
       </Link>
     </div>
