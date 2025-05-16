@@ -22,6 +22,7 @@ const MySkills = () => {
               className="relative w-full h-full max-w-3xl"
               width={500}
               height={500}
+              unoptimized
             />
           </div>
         </div>

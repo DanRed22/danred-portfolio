@@ -13,6 +13,7 @@ const GitHubStreak: React.FC = () => (
         alt="GitHub Streak"
         width={500}
         height={180}
+        unoptimized
       />
     </div>
   </AnimationContainer>

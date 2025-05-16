@@ -15,6 +15,7 @@ const GitHubContributionHistory: React.FC = () => (
         className="w-full h-full mx-auto mt-8 rounded-lg shadow-lg border border-gray-200 p-4 dark:bg-white bg-black"
         width={1000}
         height={600}
+        unoptimized
       />
     </div>
   </AnimationContainer>
