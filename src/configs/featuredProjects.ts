@@ -20,7 +20,7 @@ export const featuredProjects: CardProjectProps[] = [
     des: 'A website for the USC Supreme Student Council that allows students to view details on the council, projects, events, and resources.',
     repo: '#',
     category: 'Web Application',
-    link: 'https://ssc-website-development-build.netlify.app/',
+    link: 'https://ssc-website.vercel.app/',
     topics: [
       'React',
       'NextTS',
